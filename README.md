@@ -1,5 +1,6 @@
-# Algorithm_Study
-1. do it  <br>
+# Algorithm_Study 
+1. do it 
+
 chapter01 기본 알고리즘  <br>
  - 세 값의 최댓값 
  - 조건 판단과 분기
