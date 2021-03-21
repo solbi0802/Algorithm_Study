@@ -14,11 +14,10 @@
 
 
 function solution(arr) {
-    let answer = 0;
-    let el = 0;
+    let sum = 0;
     for (const element of arr) {
-        el += element
-        answer = el/arr.length 
+        sum += element
     }
-    return answer;
+
+    return  sum/arr.length;
 }
