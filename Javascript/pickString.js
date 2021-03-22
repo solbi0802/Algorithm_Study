@@ -25,7 +25,7 @@
 
 
 function solution(s){
-    let answer = true;
+    // let answer = true;
     let pSize = 0;
     let ySize = 0;
     
@@ -42,12 +42,10 @@ function solution(s){
     }
     
     // p,y 문자열 개수 비교 
-    if (pSize === ySize) {
-        answer = true
-    }else if (pSize !== ySize) {
-        answer = false
-    } else {
-        answer = true
-    }
-    return answer;
+    // if (pSize === ySize) {
+    //     answer = true
+    // }else if (pSize !== ySize) {
+    //     answer = false
+    // } 
+    return pSize === ySize;
 }

@@ -13,11 +13,13 @@
 */
 
 
-function solution(arr) {
-    let sum = 0;
-    for (const element of arr) {
-        sum += element
-    }
+// function solution(arr) {
+//     let sum = 0;
+//     for (const element of arr) {
+//         sum += element
+//     }
 
-    return  sum/arr.length;
-}
+//     return  sum/arr.length;
+// }
+
+const solution = arr => {arr.reduce((acc,cur) => acc + cur) / arr.length}
