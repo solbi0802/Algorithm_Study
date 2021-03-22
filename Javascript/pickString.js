@@ -51,15 +51,16 @@ function solution(s){
 }
 
 // for 루프에서 처리하는 방법
-function solution2(s) {
+function solution2(str) {
     let pNum = 0;
     let yNum = 0; 
+    str = str.toLowerCase()
 
-    for(const string of s) {
-        if (string.includes('p') || string.includes('P')) {
+    for(const subStr of str) {
+        if (subStr === 'p') {
             pNum++
         }
-        if (string.includes('y') || string.includes('Y')) {
+        if (subStr === 'y') {
             yNum++
         }
     }
