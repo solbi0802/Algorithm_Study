@@ -49,3 +49,19 @@ function solution(s){
     // } 
     return pSize === ySize;
 }
+
+// for 루프에서 처리하는 방법
+function solution2(s) {
+    let pNum = 0;
+    let yNum = 0; 
+
+    for(const string of s) {
+        if (string.includes('p') || string.includes('P')) {
+            pNum++
+        }
+        if (string.includes('y') || string.includes('Y')) {
+            yNum++
+        }
+    }
+    return pNum === yNum
+}
