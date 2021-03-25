@@ -30,8 +30,8 @@ participant	                                        completion	                 
 
 function searchUnfinishedParticipant(participant, completion) {
     // 배열 정렬
-    participant.sort();
-    completion.sort();
+    participant.sort()
+    completion.sort()
 
     for (let i = 0; i < participant.length; i++) {
         // 두 배열을 비교해서 미완주자 찾기
