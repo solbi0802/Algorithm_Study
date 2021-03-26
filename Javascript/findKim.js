@@ -14,9 +14,5 @@ seoul	            return
 ["Jane", "Kim"]	    "김서방은 1에 있다"
 */
 
-function findKim(seoul) {
-    const index = seoul.findIndex(element => {
-        return element === 'Kim'
-    })
-    return '김서방은 ' +`${index}`+ '에 있다';
-}
+const findKim = (seoul) => 
+    `김서방은 ${seoul.indexOf('Kim')}에 있다`
