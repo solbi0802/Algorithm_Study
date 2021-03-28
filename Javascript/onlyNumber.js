@@ -14,7 +14,7 @@ s는 길이 1 이상, 길이 8 이하인 문자열입니다.
 // 정규 표현식 사용 
 const onlyNumber = (s => {
     // s의 길이와 숫자외에 다른 문자가 있는 지 확인
-    return (s.length === 4 || s.length === 6) && ! s.replace(/[^a-z|A-Z]/g,'')
+    return  /^([0-9]{4}|[0-9]{6})$/.test(s)
 })
 
 // isNaN 사용
