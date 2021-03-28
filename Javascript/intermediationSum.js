@@ -16,7 +16,7 @@ a	b	return
 5	3	12
 */
 
-const intermediationSum = (a, b => {
+const intermediationSum = (a, b) => {
     /* a,b를 배열에 넣고 두 수의 평균을 계산해서 reduce로 처리하려 했지만,
     실패하는 케이스가 있었음.
     let arr = []
@@ -29,4 +29,4 @@ const intermediationSum = (a, b => {
     }
     */
     return (Math.abs(a - b) + 1) * (a + b) / 2;
-})
+}
