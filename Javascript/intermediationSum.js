@@ -17,16 +17,22 @@ a	b	return
 */
 
 const intermediationSum = (a, b) => {
-    /* a,b를 배열에 넣고 두 수의 평균을 계산해서 reduce로 처리하려 했지만,
-    실패하는 케이스가 있었음.
-    let arr = []
-    arr.push(a,b)
-    if (a === b ) {
-        return a || b
-    }else {
-        arr.push((a + b)/2)
-        return arr.reduce((a,b) => a + b)
-    }
-    */
     return (Math.abs(a - b) + 1) * (a + b) / 2;
+}
+
+const intermediationSum2 = (a, b) => {
+    let result = 0
+    
+    if ( a  == b ) {
+        return a
+    } else if ( a < b){
+        for (let i = a; i <= b; i++) {
+            result =  result + i 
+        } 
+    } else {
+        for (let i = b; i <= a; i++) {
+            result += i 
+        }
+    }
+    return result
 }
