@@ -18,7 +18,7 @@ const onlyNumber = (s => {
 })
 
 // 입력 받은 문자열을 자른 후 배열에 저장 후 문자열마다 타입 확인
-// 테스트 실패하는 케이스 존재..
+// 테스트 실패하는 케이스 존재(87.5점)
 const isNaN = (str => {    
     for (const letter of str) {
       if (isNaN(parseInt(letter))) {
