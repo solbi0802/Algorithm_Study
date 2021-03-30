@@ -36,7 +36,7 @@ const asciiDiff = str => {
                 return false 
             } 
         } return true 
-    }else { 
+    } else { 
         return false 
     } 
 }
