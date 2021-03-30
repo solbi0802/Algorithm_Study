@@ -14,6 +14,6 @@ num	return
 */
 
 
-const oddAndEven = sum => {
+const oddAndEven = num => {
     return num % 2 == 0 ? "Even" : "Odd"
  }
