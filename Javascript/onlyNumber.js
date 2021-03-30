@@ -35,7 +35,8 @@ const asciiDiff = str => {
             if (letter < "0" || letter > "9") { 
                 return false 
             } 
-        } return true 
+        } 
+        return true 
     } else { 
         return false 
     } 
