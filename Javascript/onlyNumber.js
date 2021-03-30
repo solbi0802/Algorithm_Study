@@ -21,7 +21,7 @@ const onlyNumber = s => {
 // 테스트 실패하는 케이스 존재(87.5점)
 const stringTypeCheck = str => {    
     for (const letter of str) {
-      if (isNaN(parseInt(letter))) {
+        if (isNaN(parseInt(letter))) {
           return false
         }
     }
