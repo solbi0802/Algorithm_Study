@@ -23,7 +23,7 @@ const intermediationSum = (a, b) => {
 const intermediationSum2 = (a, b) => {
     let result = 0
     
-     if ( a < b){
+     if (a < b){
         for (let i = a; i <= b; i++) {
             result =  result + i 
         } 
