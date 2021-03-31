@@ -24,6 +24,6 @@ const intermediationSum2 = (a, b) => {
     let result = 0
     for (let i = (a < b ? a : b); i <= (a < b ? b : a); i++) {
         result += i
-    } 
+    }
     return result
 }

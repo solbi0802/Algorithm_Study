@@ -16,4 +16,4 @@ num	return
 
 const oddAndEven = num => {
     return num % 2 == 0 ? "Even" : "Odd"
- }
+}

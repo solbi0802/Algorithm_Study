@@ -25,15 +25,15 @@
 */
 
 
-function solution(s){
+function solution(s) {
     // let answer = true;
     let pSize = 0;
     let ySize = 0;
-    
+
     // 정규 표현식 사용 
     let pNum = s.match(/p|P/g);
     let yNum = s.match(/y|Y/g);
-    
+
     // p,y 문자열이 없을 경우 length가 undefind이므로 전처리
     if (pNum != null) {
         pSize = pNum.length
@@ -41,7 +41,7 @@ function solution(s){
     if (yNum != null) {
         ySize = yNum.length
     }
-    
+
     // p,y 문자열 개수 비교 
     // if (pSize === ySize) {
     //     answer = true
@@ -54,10 +54,10 @@ function solution(s){
 // for 루프에서 처리하는 방법
 function solution2(str) {
     let pNum = 0;
-    let yNum = 0; 
+    let yNum = 0;
     str = str.toLowerCase()
 
-    for(const subStr of str) {
+    for (const subStr of str) {
         if (subStr === 'p') {
             pNum++
         }

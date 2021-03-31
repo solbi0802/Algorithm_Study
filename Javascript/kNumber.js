@@ -28,11 +28,11 @@ array	commands	return
 function findKnumber(array, commands) {
     let sliceArray = []
     let resultArray = []
-    
+
     for (let n = 0; n < commands.length; n++) {
-        sliceArray = array.slice(commands[n][0]-1,commands[n][1]) // i번째 숫자부터 j번째 숫자까지 자르기
+        sliceArray = array.slice(commands[n][0] - 1, commands[n][1]) // i번째 숫자부터 j번째 숫자까지 자르기
         sliceArray = sliceArray.sort((a, b) => a - b) // 자른 배열 정렬
-        resultArray[n] = sliceArray[commands[n][2]-1] // k번째 숫자 저장
+        resultArray[n] = sliceArray[commands[n][2] - 1] // k번째 숫자 저장
     }
     return resultArray;
 }

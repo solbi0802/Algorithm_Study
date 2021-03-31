@@ -16,8 +16,8 @@ arr	            return
 */
 
 function deleteMinNumber(arr) {
-    if (arr.length === 1 ) {
-        return [-1]   
+    if (arr.length === 1) {
+        return [-1]
     }
     const min = arr.reduce((previous, current) => {
         return previous > current ? current : previous
