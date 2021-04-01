@@ -16,5 +16,10 @@ str은 부호(+,-)와 숫자로만 구성되어 있고, 잘못된 값이 입력�
 */
 
 const stringToInt = str => {
-    return  parseInt(str)
+    return parseInt(str)
+}
+
+// 비트 연산 사용
+const stringToInt2 = str => {
+    return str >> 0
 }
