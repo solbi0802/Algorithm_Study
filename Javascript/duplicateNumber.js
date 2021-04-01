@@ -22,8 +22,7 @@ arr	answer
 문제의 예시와 같습니다.
 */
 
-function duplicateNumber(arr)
-{
-    // 연속되어 중복되는 값만 제거해야 하는데, 중복된 값만 모두 제거 되는 문제가 있음. (미완) 
-    return  arr.filter((item, index) => arr.indexOf(item) === index)
+const duplicateNumber = arr => {
+    // 연속되어 중복되는 값만 제거
+    return arr.filter((value, index) => value === arr[index + 1])
 }
