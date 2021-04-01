@@ -24,5 +24,5 @@ arr	answer
 
 const duplicateNumber = arr => {
     // 연속되어 중복되는 값만 제거
-    return arr.filter((value, index) => value === arr[index + 1])
+    return arr.filter((value, index) => value !== arr[index + 1])
 }
