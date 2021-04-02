@@ -48,13 +48,13 @@ function solution(s) {
     // }else if (pSize !== ySize) {
     //     answer = false
     // } 
-    return pSize === ySize;
+    return pSize === ySize
 }
 
 // for 루프에서 처리하는 방법
 function solution2(str) {
-    let pNum = 0;
-    let yNum = 0;
+    let pNum = 0
+    let yNum = 0
     str = str.toLowerCase()
 
     for (const subStr of str) {

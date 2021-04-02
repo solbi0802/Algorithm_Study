@@ -17,7 +17,7 @@ a	b	return
 */
 
 const intermediationSum = (a, b) => {
-    return (Math.abs(a - b) + 1) * (a + b) / 2;
+    return (Math.abs(a - b) + 1) * (a + b) / 2
 }
 
 const intermediationSum2 = (a, b) => {

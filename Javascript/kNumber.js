@@ -34,5 +34,5 @@ function findKnumber(array, commands) {
         sliceArray = sliceArray.sort((a, b) => a - b) // 자른 배열 정렬
         resultArray[n] = sliceArray[commands[n][2] - 1] // k번째 숫자 저장
     }
-    return resultArray;
+    return resultArray
 }

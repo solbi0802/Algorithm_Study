@@ -36,7 +36,7 @@ function searchUnfinishedParticipant(participant, completion) {
     for (let i = 0; i < participant.length; i++) {
         // 두 배열을 비교해서 미완주자 찾기
         if (participant[i] !== completion[i]) {
-            return participant[i];
+            return participant[i]
         }
     }
 }
