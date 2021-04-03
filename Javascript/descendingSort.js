@@ -11,6 +11,15 @@ s	         return
 "Zbcdefg"	"gfedcbZ"
 */
 
-const solution = s => {
-    return s.split('').sort().reverse().join('')
+const descendingSort = s => {
+    return s.split('').sort((a, b) => {
+        // 문자열 비교 
+        if (a > b) {
+            return -1
+        } else if (a === b) {
+            return 0
+        } else {
+            return 1
+        }
+    }).join('')
 }
