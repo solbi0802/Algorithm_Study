@@ -15,9 +15,6 @@
 2
 */
 
-const min = (n1, n2, n3, n4, n5, n6, n7) => {
-    return Math.min(n1, n2, n3, n4, n5, n6, n7)
-
-}
+const min = (n1, n2, n3, n4, n5, n6, n7) => Math.min(n1, n2, n3, n4, n5, n6, n7)
 
 console.log(min(5, 3, 7, 11, 2, 15, 17))
