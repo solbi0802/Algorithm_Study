@@ -30,7 +30,7 @@ const odd = (arr) => {
         return a % 2 !== 0
     })
     const total = oddList.reduce((a, b) => a + b)
-    const min = oddList.reduce((a, b) => Math.min(a, b))
+    const min = Math.min(...oddList)
     result.push(total)
     result.push(min)
 
