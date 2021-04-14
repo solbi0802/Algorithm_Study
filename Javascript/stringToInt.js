@@ -23,3 +23,16 @@ const stringToInt = str => {
 const stringToInt2 = str => {
     return str >> 0
 }
+
+
+const parsingInteger = str => {
+    let result = 0
+    for (let i = str.length - 1; i >= 0; i--) {
+        if (str[i] === '-') {
+            result *= -1
+        } else {
+            result += str[i] * Math.pow(10, str.length - i - 1)
+        }
+    }
+    return result
+}
