@@ -30,8 +30,10 @@ const parsingInteger = str => {
     for (let i = str.length - 1; i >= 0; i--) {
         if (str[i] === '-') {
             result *= -1
+        } else if (str[i] === '+') {
+            break;
         } else {
-            result += str[i] * Math.pow(10, str.length - i - 1)
+            result += Number(str[i]) * Math.pow(10, str.length - i - 1)
         }
     }
     return result
