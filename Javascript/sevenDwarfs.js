@@ -19,11 +19,12 @@
 */
 
 const sevenDwarfs = (height) => {
-    let sum = height.reduce((a, b) => (a + b) - 100) // 9명의 합 - 100
+    let sum = height.reduce((a, b) => (a + b)) // 9명의 합
+    let subSum = sum - 100
     // 숫자 하나하나 전부 다 비교
     for (let i = 0; i < height.length - 1; i++) {
         for (let j = i + 1; j < height.length; j++) {
-            if ((height[i] + height[j]) === sum) {
+            if ((height[i] + height[j]) === subSum) {
                 height.splice(j, 1)
                 height.splice(i, 1)
             }
