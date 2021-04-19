@@ -27,6 +27,7 @@ arr의 모든 원소는 1으로 나누어 떨어집니다. 원소를 오름차�
 
 const divisor = (arr, divisor) => {
     let result = []
+    arr.sort((a, b) => a - b) // 배열 정렬
     for (const element of arr) {
         if (element % divisor === 0) {
             result.push(element)
