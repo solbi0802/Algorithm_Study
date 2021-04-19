@@ -41,9 +41,9 @@ const test = (answers) => {
     const two = [2, 1, 2, 3, 2, 4, 2, 5]
     const three = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
 
-    let score1 = answers.filter((answer, i) => answer === one[i % 5]).length
-    let score2 = answers.filter((answer, i) => answer === two[i % 8]).length
-    let score3 = answers.filter((answer, i) => answer === three[i % 10]).length
+    const score1 = answers.filter((answer, i) => answer === one[i % 5]).length
+    const score2 = answers.filter((answer, i) => answer === two[i % 8]).length
+    const score3 = answers.filter((answer, i) => answer === three[i % 10]).length
 
     const max = Math.max(score1, score2, score3)
 
