@@ -19,5 +19,6 @@ n	return
 */
 
 const solution = n => {
-    return Number.isInteger(Math.sqrt(n)) ? Math.pow(Math.sqrt(n) + 1, 2) : -1
+    const sqrtNumber = Math.sqrt(n)
+    return sqrtNumber % 1 === 0 ? Math.pow(sqrtNumber + 1, 2) : -1  // 양의 정수인 지 판별
 }
