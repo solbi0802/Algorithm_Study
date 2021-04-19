@@ -35,17 +35,17 @@ answers	return
 */
 
 const test = (answers) => {
-    let result = []
+    const result = []
     // 수포자들의 반복되는 패턴을 배열에 저장
-    let one = [1, 2, 3, 4, 5]
-    let two = [2, 1, 2, 3, 2, 4, 2, 5]
-    let three = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    const one = [1, 2, 3, 4, 5]
+    const two = [2, 1, 2, 3, 2, 4, 2, 5]
+    const three = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
 
     let score1 = answers.filter((answer, i) => answer === one[i % 5]).length
     let score2 = answers.filter((answer, i) => answer === two[i % 8]).length
     let score3 = answers.filter((answer, i) => answer === three[i % 10]).length
 
-    let max = Math.max(score1, score2, score3)
+    const max = Math.max(score1, score2, score3)
 
     if (score1 === max)
         result.push(1)
