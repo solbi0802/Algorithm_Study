@@ -27,8 +27,7 @@ arr	return
 */
 
 const harshadNumber = n => {
-    const num = n
-    const splitNumber = num.toString().split('')
+    const splitNumber = n.toString().split('')
     const sum = splitNumber.reduce((a, b) => {
         return parseInt(a) + parseInt(b)
     })
