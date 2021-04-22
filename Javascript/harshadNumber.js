@@ -27,11 +27,13 @@ arr	return
 */
 
 const harshadNumber = n => {
-    const splitNumber = n.toString().split('')
-    const sum = splitNumber.reduce((a, b) => {
-        return parseInt(a) + parseInt(b)
-    })
-    if (x % sum === 0) {
+    let sum = 0
+    let num = n // n값을 변경하지 않기 위해 변수에 저장
+    while (num > 0) {
+        sum += num % 10
+        num /= 10
+    }
+    if (n % Math.floor(sum) === 0) {
         return true
     } else {
         return false
