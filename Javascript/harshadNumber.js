@@ -29,7 +29,7 @@ arr	return
 const harshadNumber = n => {
     let sum = 0
     let num = n // n값을 변경하지 않기 위해 변수에 저장
-    while (Math.floor(num) > 0) {
+    while (num > 0) {
         sum += num % 10
         num = Math.floor(num / 10)
     }
