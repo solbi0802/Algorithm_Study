@@ -33,7 +33,7 @@ const harshadNumber = n => {
         sum += num % 10
         num = Math.floor(num / 10)
     }
-    if (n % Math.floor(sum) === 0) {
+    if (n % Math.round(sum) === 0) {
         return true
     } else {
         return false
