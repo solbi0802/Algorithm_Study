@@ -17,13 +17,12 @@ n	return
 5의 약수는 1, 5입니다. 이를 모두 더하면 6입니다.
 */
 
-const divisor = n => {
+const getSumOfDivisor = n => {
     const div = []
     for (let i = 1; i <= n; i++) {
         if (n % i === 0) {
             div.push(i)
         }
     }
-    let sum = div.reduce((a, b) => a + b, 0)
-    return sum
+    return div.reduce((a, b) => a + b, 0)
 }
