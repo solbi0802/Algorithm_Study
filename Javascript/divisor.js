@@ -26,7 +26,7 @@ arr의 모든 원소는 1으로 나누어 떨어집니다. 원소를 오름차�
 */
 
 const divisor = (arr, divisor) => {
-    let result = []
+    const result = []
     arr.sort((a, b) => a - b) // 배열 정렬
     for (const element of arr) {
         if (element % divisor === 0) {
@@ -34,4 +34,21 @@ const divisor = (arr, divisor) => {
         }
     }
     return result.length > 0 ? result.sort((a, b) => a - b) : [-1]
+}
+
+const divisor2 = (arr, divisor) => {
+    const result = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % divisor === 0) {
+            let rIndex = 0
+            //result에 데이터 입력 전 result 크기 비교
+            for (rIndex = 0; rIndex < result.length; rIndex++) {
+                if (result[rIndex] > arr[i]) {
+                    break;
+                }
+            }
+            result.splice(rIndex, 0, arr[i])
+        }
+    }
+    return result.length > 0 ? result : [-1]
 }
