@@ -10,7 +10,7 @@ n	return
 12345	[5,4,3,2,1]
 */
 function solution(n) {
-    let answer = []
+    const answer = []
     let num = n
     while (num > 0) {
         answer.push(num % 10)
