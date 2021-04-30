@@ -24,5 +24,7 @@ function solution(n) {
         tempArr.splice(i, 0, num % 10)
         num = Math.floor(num / 10)
     }
-    return Number(tempArr.join(''))
+
+    let result = +tempArr.join('')
+    return result
 }
