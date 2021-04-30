@@ -15,10 +15,14 @@ function solution(n) {
     const tempArr = []
 
     while (num >= 1) {
-        tempArr.push(num % 10)
+        let i = 0
+        for (i = 0; i < tempArr.length; i++) {
+            if (tempArr[i] <= num % 10) {
+                break
+            }
+        }
+        tempArr.splice(i, 0, num % 10)
         num = Math.floor(num / 10)
     }
-    tempArr.sort((a, b) => b - a)
-
     return Number(tempArr.join(''))
 }
