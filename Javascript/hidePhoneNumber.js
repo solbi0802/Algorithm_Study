@@ -18,7 +18,7 @@ function solution(phone_number) {
 }
 
 //반복문 사용
-function solution(phone_number) {
+function solution2(phone_number) {
     let answer = '';
     for (let i = 0; i < phone_number.length; i++) {
         if (i < phone_number.length - 4) {
