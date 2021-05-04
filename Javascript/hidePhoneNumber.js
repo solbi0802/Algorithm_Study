@@ -12,6 +12,20 @@ phone_number	return
 "027778888"	"*****8888"
 */
 
+// 정규표현식 사용 
 function solution(phone_number) {
     return phone_number.replace(/\d(?=\d{4})/g, '*')
+}
+
+//반복문 사용
+function solution(phone_number) {
+    let answer = '';
+    for (let i = 0; i < phone_number.length; i++) {
+        if (i < phone_number.length - 4) {
+            answer += '*'
+        } else {
+            answer += phone_number[i]
+        }
+    }
+    return answer
 }
