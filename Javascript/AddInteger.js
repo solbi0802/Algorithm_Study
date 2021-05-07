@@ -27,9 +27,9 @@ signs가 [false,false,true] 이므로, 실제 수들의 값은 각각 -1, -2, 3�
 */
 
 function solution(absolutes, signs) {
-    let answer = 0
+    let result = 0
     for (let i = 0; i < absolutes.length; i++) {
-        signs[i] === true ? answer += absolutes[i] : answer += -1 * absolutes[i]
+        signs[i] === true ? result += absolutes[i] : result += -1 * absolutes[i]
     }
-    return answer
+    return result
 }
