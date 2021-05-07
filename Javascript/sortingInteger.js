@@ -12,7 +12,8 @@ n	return
 
 function solution(n) {
     let num = n
-    const tempArr = []
+    let tempArr = []
+    let result = 0
 
     while (num >= 1) {
         let i = 0
@@ -24,7 +25,10 @@ function solution(n) {
         tempArr.splice(i, 0, num % 10)
         num = Math.floor(num / 10)
     }
-
-    let result = +tempArr.join('')
+    let pow = 1
+    for (let i = tempArr.length - 1; i >= 0; i--) {
+        result += tempArr[i] * pow
+        pow *= 10
+    }
     return result
 }
