@@ -24,16 +24,14 @@ n	result
 // 에라토스테네스의 체(https://ko.wikipedia.org/wiki/%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98_%EC%B2%B4)로 소수 찾기
 const solution = (n) => {
     const arr = []
-    // 모든 수가 일단 true라고 생각하고 배열 만들기
     for (let i = 0; i < n + 1; i++) {
         arr.push(i)
     }
 
     for (let i = 2; i * i <= n; i++) {
         if (arr[i]) {
-            // 제곱수는 false로 저장
             for (let j = i * i; j <= n; j += i) {
-                arr[j] = false
+                arr[j] = 0
             }
         }
     }
