@@ -14,10 +14,26 @@ a	b	result
 5	24	"TUE"
 */
 
+// getDay() 사용
 const solution = (month, day) => {
     const week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
     let result = new Date(2016, month - 1, day) //javascript에서 month는 0 ~11
     result = week[result.getDay()]
+
+    return result
+}
+
+// for문 사용
+const solution2 = (month, day) => {
+    const week = ['FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED', 'THU']
+    const m = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    let total = 0
+
+    for (let i = 0; i < month - 1; i++) {
+        total += m[i]
+    }
+    total += day - 1
+    const result = week[total % 7]
 
     return result
 }
