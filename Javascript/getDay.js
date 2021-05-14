@@ -33,7 +33,6 @@ const solution2 = (month, day) => {
         total += m[i]
     }
     total += day - 1
-    const result = week[total % 7]
 
-    return result
+    return week[total % 7]
 }
