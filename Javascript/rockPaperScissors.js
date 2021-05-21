@@ -49,7 +49,7 @@ function solution(a, b) {
             answer[i] = 'B'
         }
     }
-    return answer.join(' ')
+    return answer.join('\n')
 }
 
 const a = [2, 3, 3, 1, 3]
@@ -57,4 +57,4 @@ const b = [1, 1, 2, 2, 3]
 console.log(solution(a, b))
 const a2 = [1, 3, 3, 1, 1]
 const b2 = [1, 2, 3, 2, 3]
-console.log(solution(a2, b2))
+console.log('\n' + solution(a2, b2))
