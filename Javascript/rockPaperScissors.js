@@ -36,8 +36,8 @@ function solution(a, b) {
     let answer = ''
 
     for (let i = 0; i < a.length; i++) {
-        // 비기는 경우
-        if (a[i] === b[i]) {
+        // a가 이기는 케이스를 기준으로 처리하고 그 외에 케이스는 모두 B가 이기는 상황으로 봄
+        if (a[i] === b[i]) { // 비기는 경우
             answer += 'D' + '\n'
         } else if (a[i] === 1 && b[i] === 3) {
             answer += 'A' + '\n'
