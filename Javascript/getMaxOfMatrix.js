@@ -47,6 +47,7 @@ const solution = (arr) => {
     }
     columnSum = 0
     rowSum = 0
+    // 대각선의 합 구하기
     for (let i = 0; i < len; i++) {
         rowSum += arr[i][i]
         columnSum += arr[i][len - i - 1]
