@@ -18,7 +18,6 @@ s	n	result
 
 const solution = (s, n) => {
     const asciiCodeList = []
-    let result = ''
     for (let i = 0; i < s.length; i++) {
         const num = s.charCodeAt(i) + n
         if (s[i] === ' ') { // 공백일 경우 
@@ -31,10 +30,5 @@ const solution = (s, n) => {
             asciiCodeList.push(num)
         }
     }
-
-    result = String.fromCharCode(asciiCodeList.join())
-    return result
+    return String.fromCharCode(...asciiCodeList)
 }
-
-const str = "a B z"
-console.log(solution(str, 4))
