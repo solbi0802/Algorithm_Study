@@ -16,6 +16,7 @@ s	n	result
 "a B z"	4	"e F d"
 */
 
+// TODO n을 더했을 때 소문자 -> 대문자가 되는 케이스 고려
 const solution = (s, n) => {
     const asciiCodeList = []
     for (let i = 0; i < s.length; i++) {
