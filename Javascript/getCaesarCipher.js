@@ -16,20 +16,25 @@ s	n	result
 "a B z"	4	"e F d"
 */
 
-// 아스키 코드 값으로 계산
-// 알파벳이 아닌 아스키 코드로 변환시, 처리 필요
 const solution = (s, n) => {
     const asciiCodeList = []
     let result = ''
     for (let i = 0; i < s.length; i++) {
+        const num = s.charCodeAt(i) + n
         if (s[i] === ' ') { // 공백일 경우 
             asciiCodeList.push(s.charCodeAt(i))
+        } else if (num > 90 && num < 97) { // 알파벳 대문자 범위(65~90) 밖 일 때
+            asciiCodeList.push(num - 26)
+        } else if (num > 98 && num > 122) { // 알파벳 소문자 범위(97~122) 밖 일 때
+            asciiCodeList.push(num - 26)
         } else {
-            asciiCodeList.push(s.charCodeAt(i) + n)
+            asciiCodeList.push(num)
         }
     }
-    // 알파벳이 아닐 경우에 대한 처리 필요 (65~90 (대문자), 97~122(소문자))
 
-    console.log('asciiCodeList', asciiCodeList)
+    result = String.fromCharCode(asciiCodeList.join())
     return result
 }
+
+const str = "a B z"
+console.log(solution(str, 4))
