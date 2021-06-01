@@ -42,13 +42,13 @@ const solution = (arr) => {
     const y = [0, 1, 0, -1]
     for (let i = 0; i < len; i++) {
         for (let j = 0; j < len; j++) {
-            let flag = 1
+            let flag = true
             for (let k = 0; k < 4; k++) {
                 let dx = i + x[k]
                 let dy = j + y[k]
                 //arr[i][j]보다 큰 값이 발견되면 반복문 중단
                 if (dx >= 0 && dx < len && dy >= 0 && dy < len && arr[dx][dy] >= arr[i][j]) {
-                    flag = 0
+                    flag = false
                     break
                 }
             }
