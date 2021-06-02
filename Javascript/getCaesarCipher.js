@@ -16,18 +16,29 @@ s	n	result
 "a B z"	4	"e F d"
 */
 
-// TODO n을 더했을 때 소문자 -> 대문자가 되는 케이스 고려
+// 고려사항 추가 (Z + 1 = A, z + 1 = a)
 const solution = (s, n) => {
     const asciiCodeList = []
+    let temp = 0
     for (let i = 0; i < s.length; i++) {
-        const num = s.charCodeAt(i) + n
+        let num = s.charCodeAt(i)
         if (s[i] === ' ') { // 공백일 경우 
             asciiCodeList.push(s.charCodeAt(i))
-        } else if (num > 90 && num < 97) { // 알파벳 대문자 범위(65~90) 밖 일 때
-            asciiCodeList.push(num - 26)
-        } else if (num > 98 && num > 122) { // 알파벳 소문자 범위(97~122) 밖 일 때
-            asciiCodeList.push(num - 26)
-        } else {
+        }
+        if (num > 64 && num < 91) { // 알파벳 대문자일 때
+            num += n
+            if (num > 90) {
+                temp = num - 90
+                num = 64 + temp
+            }
+            asciiCodeList.push(num)
+        }
+        if (num > 96 && num < 123) { // 알파벳 소문자 일 때
+            num += n
+            if (num > 122) {
+                temp = num - 122
+                num = 96 + temp
+            }
             asciiCodeList.push(num)
         }
     }
