@@ -20,11 +20,12 @@ YES
 
 const solution = (str) => {
     const len = str.length
-    for (let i = 0; i < len; i++) {
-        if (str[i].toUpperCase() === str[len - 1].toUpperCase()) {
-            return 'YES'
-        } else {
+    str = str.toUpperCase()
+    for (let i = 0; i < parseInt(len / 2); i++) {
+        if (str[i] !== str[len - i - 1]) {
             return 'NO'
+        } else {
+            return 'YES'
         }
     }
 }
@@ -35,5 +36,5 @@ console.log(solution(str))
 const str2 = 'javascript'
 console.log(solution(str2))
 
-const str3 = 'Atoa'
+const str3 = 'Atta'
 console.log(solution(str3))
