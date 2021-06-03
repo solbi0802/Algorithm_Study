@@ -22,25 +22,20 @@ const solution = (s, n) => {
     let temp = 0
     for (let i = 0; i < s.length; i++) {
         let num = s.charCodeAt(i)
-        if (s[i] === ' ') { // 공백일 경우 
-            asciiCodeList.push(s.charCodeAt(i))
-        }
         if (num > 64 && num < 91) { // 알파벳 대문자일 때
             num += n
             if (num > 90) {
                 temp = num - 90
                 num = 64 + temp
             }
-            asciiCodeList.push(num)
-        }
-        if (num > 96 && num < 123) { // 알파벳 소문자 일 때
+        } else if (num > 96 && num < 123) { // 알파벳 소문자 일 때
             num += n
             if (num > 122) {
                 temp = num - 122
                 num = 96 + temp
             }
-            asciiCodeList.push(num)
         }
+        asciiCodeList.push(num)
     }
     return String.fromCharCode(...asciiCodeList)
 }
