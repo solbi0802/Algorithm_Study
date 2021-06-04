@@ -21,7 +21,7 @@ YES
 const solution = (str) => {
     const len = str.length
     str = str.toUpperCase()
-    for (let i = 0; i < parseInt(len / 2); i++) {
+    for (let i = 0; i < Math.floor(len / 2); i++) {
         if (str[i] !== str[len - i - 1]) {
             return 'NO'
         } else {
