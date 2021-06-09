@@ -19,18 +19,17 @@ teachermode e
 
 const solution = (s, t) => {
     let result = []
-    let temp = 100 // 처음 시작할 때 임의의 큰 숫자 넣어주기
+    let temp = 0
 
     //왼쪽,오른쪽 방향으로 탐색하면서 최소 거리 구하기
 
     for (const str of s) {
         if (str === t) {
             temp = 0
-            result.push(temp)
         } else {
             temp++
-            result.push(temp)
         }
+        result.push(temp)
     }
 
     for (let i = s.length - 1; i >= 0; i--) {
