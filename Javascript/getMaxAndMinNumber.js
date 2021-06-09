@@ -20,5 +20,5 @@ const solution = (s) => {
         if (parseInt(a) < parseInt(b)) return -1
         return 0
     })
-    return sortNum[0].toString() + ' ' + sortNum[sortNum.length - 1]
+    return `${sortNum[0].toString()} ${sortNum[sortNum.length - 1]}`
 }
