@@ -37,9 +37,7 @@ const solution = (arr) => {
         let reverseNum = 0
         while (arr[i]) {
             reverseNum = reverseNum * 10 + arr[i] % 10
-            console.log(reverseNum)
             arr[i] = Math.floor(arr[i] / 10)
-            console.log(arr[i])
         }
         if (isPrime(reverseNum))
             result.push(reverseNum)
