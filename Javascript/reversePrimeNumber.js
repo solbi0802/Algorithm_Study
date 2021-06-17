@@ -21,9 +21,9 @@ N개의 자연수가 입력되면 각 자연수를 뒤집은 후 그 뒤집은 �
 
 // 소수인지 판별하는 함수
 const isPrime = (num) => {
-    if (num === 1)
+    if (num < 2)
         return false
-    for (let i = 2; i <= parseInt(Math.sqrt(num)); i++) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
         if (num % i === 0)
             return false
     }
@@ -35,7 +35,7 @@ const solution = (arr) => {
     const result = []
     for (let i = 0; i < len; i++) {
         let reverseNum = 0
-        while (arr[i]) {
+        while (arr[i] > 0) {
             reverseNum = reverseNum * 10 + arr[i] % 10
             arr[i] = Math.floor(arr[i] / 10)
         }
