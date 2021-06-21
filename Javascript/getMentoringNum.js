@@ -38,22 +38,23 @@ const solution = (arr) => {
     for (let i = 1; i <= studentNum; i++) {
         for (let j = 1; j <= studentNum; j++) {
             let counter = 0
-            if (i !== j) { //멘토와 멘티가 같을 수 없음
-                for (let test = 0; test < testNum; test++) {
-                    let mentor = 0
-                    let mentee = 0
-                    for (let s = 0; s < studentNum; s++) {
-                        if (arr[test][s] === i)
-                            mentor = s
-                        if (arr[test][s] === j)
-                            mentee = s
-                    }
-                    if (mentor < mentee)
-                        counter++
-                }
-                if (counter === testNum)
-                    result++
+            if (i === j) {  //멘토와 멘티가 같을 수 없음
+                continue
             }
+            for (let test = 0; test < testNum; test++) {
+                let mentor = 0
+                let mentee = 0
+                for (let s = 0; s < studentNum; s++) {
+                    if (arr[test][s] === i)
+                        mentor = s
+                    if (arr[test][s] === j)
+                        mentee = s
+                }
+                if (mentor < mentee)
+                    counter++
+            }
+            if (counter === testNum)
+                result++
         }
     }
     return result
