@@ -39,11 +39,14 @@ const solution = (money, arr) => {
         let budget = money - (arr[i][0] / 2 + arr[i][1])  // 원래 상품 가격(arr[i][0])에 50% 할인된 가격 + 배송비로 계산
         let cnt = 1
         for (let j = 0; j < len; j++) {
-            if (j !== i && arr[j][0] + arr[j][1] > budget)
-                break
-            if (j !== i && arr[j][0] + arr[j][1] <= budget) {
-                budget -= arr[j][0] + arr[j][1]
-                cnt++
+            if (j !== i) {
+                const itemPrice = arr[j][0] + arr[j][1]
+                if (itemPrice > budget) {
+                    break
+                } else {
+                    budget -= itemPrice
+                    cnt++
+                }
             }
         }
         result = Math.max(result, cnt)
