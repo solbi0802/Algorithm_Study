@@ -55,7 +55,7 @@ const b = [2, 3, 6, 7, 9]
 const a2 = [0, 3, 8]
 const b2 = [0, 1, 5, 6, 9]
 
-console.log('solution1:', solution(a, b));
-console.log('solution2:', solution2(a, b));
-console.log('solution1-1:', solution(a2, b2));
-console.log('solution2-2:', solution2(a2, b2));
+console.log('solution1:', solution(a, b))
+console.log('solution2:', solution2(a, b))
+console.log('solution1-1:', solution(a2, b2))
+console.log('solution2-2:', solution2(a2, b2))
