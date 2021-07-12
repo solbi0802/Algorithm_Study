@@ -24,14 +24,24 @@ s	       answer
 */
 
 const solution = (s) => {
-    let result = true
-    const len = s.length
-    for (let i = 0; i < len; i++) {
-        if (s[0] === '(' && s[len - 1] === ')') {
-            result = true
-        } else {
-            result = false
+    const len = s.length;
+
+    if (len % 2 !== 0) {
+        return false;
+    }
+    const answer = [];
+    const str = [...s];
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === answer[answer.length - 1]) {
+            answer.pop();
+            continue;
+        }
+
+        answer.push(str[i]);
+        if (answer[answer.length - 1] === '(' && answer[0] === ')') {
+            return false;
         }
     }
-    return result
+    return true;
 }
