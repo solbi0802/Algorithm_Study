@@ -23,28 +23,24 @@ s	       answer
 문제의 예시와 같습니다.
 */
 
+// 스택을 이용한 방법
 const solution = (s) => {
-    const len = s.length;
     let answer = true;
+    const stack = [];
 
-    if (len % 2 !== 0) {
-        return false;
-    }
-    let open = 0;
-
-    for (let i = 0; i < len; i++) {
-
-        if (s.charAt(i) == '(')
-            open++;
+    for (const c of s) {
+        if (c === '(')
+            stack.push(c);
         else {
-            if (open <= 0)
+            if (stack.length === 0)
                 return false;
-            open--;
+            stack.pop();
         }
     }
 
-    if (open != 0)
+    if (stack.length > 0)
         return false;
 
     return answer;
 }
+
