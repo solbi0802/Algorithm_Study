@@ -25,25 +25,26 @@ s	       answer
 
 const solution = (s) => {
     const len = s.length;
-    let open = 0;
-    let close = 0;
+    let answer = true;
 
     if (len % 2 !== 0) {
         return false;
     }
+    let open = 0;
 
     for (let i = 0; i < len; i++) {
-        if (s[i] == '(')
-            open++;
-        else
-            close++;
 
-        if (s[0] === ')' && s[len - 1] === '(') {
-            return false;
+        if (s.charAt(i) == '(')
+            open++;
+        else {
+            if (open <= 0)
+                return false;
+            open--;
         }
     }
-    if (open !== close) {
+
+    if (open != 0)
         return false;
-    }
-    return true;
+
+    return answer;
 }
