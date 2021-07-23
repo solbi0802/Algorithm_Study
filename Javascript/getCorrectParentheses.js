@@ -25,7 +25,6 @@ s	       answer
 
 // 스택을 이용한 방법
 const solution = (s) => {
-    let answer = true;
     const stack = [];
 
     for (const c of s) {
@@ -41,6 +40,6 @@ const solution = (s) => {
     if (stack.length > 0)
         return false;
 
-    return answer;
+    return true;
 }
 
