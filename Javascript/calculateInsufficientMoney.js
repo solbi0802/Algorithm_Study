@@ -25,7 +25,7 @@ const solution = (price, money, count) => {
     let totalPrice = 0;
     // count 만큼 반복해서 실행한다. 
     // 반복할 때 마다 요금은 totalPrice = price * 반복횟수(1,2,3,...)
-    // answer = totalPrice - money
+    // answer = money - totalPrice
 
     for (let i = 1; i <= count; i++) {
         totalPrice += price * i;
