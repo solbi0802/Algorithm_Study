@@ -21,16 +21,15 @@ price	money	count	result
 */
 
 const solution = (price, money, count) => {
-    let answer = 0;
     let totalPrice = 0;
     // count 만큼 반복해서 실행한다. 
     // 반복할 때 마다 요금은 totalPrice = price * 반복횟수(1,2,3,...)
-    // answer = money - totalPrice
+    // answer = totalPrice - money
 
     for (let i = 1; i <= count; i++) {
         totalPrice += price * i;
     }
 
-    answer = money - totalPrice;
-    return answer > 0 ? 0 : Math.abs(answer); // 금액이 부족하지 않으면 0을 반환
+    const answer = totalPrice - money;
+    return answer > 0 ? answer : 0;  // 금액이 부족하지 않으면 0을 반환
 }
