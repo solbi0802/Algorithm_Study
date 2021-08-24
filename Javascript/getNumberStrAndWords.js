@@ -52,31 +52,16 @@ https://programmers.co.kr/learn/courses/30/lessons/81301
 */
 
 const solution = (s) => {
-    // 숫자,영단어를 array or object에 저장함
+    // 숫자영단어를 array에 저장함
     // 저장된 값과 매칭되는 문자열을 찾아서 변환해주기
-    let answer = s;
     const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
-    for (let i = 0; i < answer.length; i++) {
-        if (s[i] === 'z') {
-            answer += words.indexOf('zero')
-        } else if (s[i] === 'o' && s[i + 1] === 'n') {
-            answer += words.indexOf('one')
-        } else if (s[i] === 't' && s[i + 1] === 'w') {
-            answer += words.indexOf('two')
-        } else if (s[i] === 't' && s[i + 1] === 'h') {
-            answer += words.indexOf('three')
-        } else if (s[i] === 'f' && s[i + 1] === 'o') {
-            answer += words.indexOf('four')
-        } else if (s[i] === 's' && s[i + 1] === 'i') {
-            answer += words.indexOf('six')
-        } else if (s[i] === 's' && s[i + 1] === 'e') {
-            answer += words.indexOf('seven')
-        } else if (s[i] === 'e' && s[i + 1] === 'i') {
-            answer += words.indexOf('eight')
-        } else if (s[i] === 'n' && s[i + 1] === 'i') {
-            answer += words.indexOf('nine')
-        }
+    let answer = s;
+
+    for (let i = 0; i < words.length; i++) {
+        const arr = answer.split(words[i]);
+        answer = arr.join(i);
     }
-    return answer;
+
+    return Number(answer); // 숫자로 변환
 }
