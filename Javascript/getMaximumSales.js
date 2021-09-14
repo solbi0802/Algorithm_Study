@@ -30,6 +30,8 @@ const solution = (sales, k) => {
         sum += sales[i];
     }
 
+    answer = sum;
+
     for (let i = k; i < sales.length; i++) {
         sum += sales[i] - sales[i - k];
         answer = Math.max(answer, sum);
@@ -38,4 +40,7 @@ const solution = (sales, k) => {
 }
 
 const sales = [12, 15, 11, 20, 25, 10, 20, 19, 13, 15];
+const sales2 = [80, 100, 200, 20, 25, 10, 20, 19, 13, 15];
+
 console.log(solution(sales, 3));
+console.log(solution(sales2, 3));
