@@ -21,15 +21,24 @@ numbers	result
 */
 
 const solution = (numbers) => {
-
+    const answer = [];
     // 0 ~9 까지의 숫자 배열 저장
     const numberList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     // 입력 받은 숫자 오름차순 정렬
     numbers.sort((a, b) => a - b);
     // 없는 숫자 찾고 더하기 
-    const notInNumber = numberList.filter(n => !numbers.includes(n));
-    const answer = notInNumber.reduce((acc, n) => {
+    const numberListSize = numberList.length;
+
+    let nIndex = 0;
+    for (let i = 0; i < numberListSize; i++) {
+        if (numbers[nIndex] !== numberList[i]) {
+            answer.push(numberList[i]);
+        } else {
+            nIndex++;
+        }
+    }
+
+    return answer.reduce((acc, n) => {
         return acc + n;
     })
-    return answer;
 }
