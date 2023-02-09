@@ -17,8 +17,7 @@ const solution = (str) => {
   let count = 0;
   if (str.length > 100) throw new Error("문자열의 길이는 100을 넘지 않습니다.");
   for (s of str) {
-    const asciiCode = s.charCodeAt();
-    if (asciiCode >= 65 && asciiCode <= 90) {
+    if (s >= "A" && s <= "Z") {
       count++;
     }
   }
