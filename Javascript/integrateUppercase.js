@@ -16,8 +16,12 @@ const solution = (str) => {
   if (str.length > 100) throw new Error("문자열의 길이는 100을 넘지 않습니다.");
   for (s of str) {
     let asciiCode = s.charCodeAt();
-    if (s >= "a" && s <= "z") result += String.fromCharCode(asciiCode - 32);
-    else result += s;
+
+    if (s >= "a" && s <= "z") {
+      result += String.fromCharCode(
+        asciiCode - (asciiCode - s.toUpperCase().charCodeAt())
+      );
+    } else result += s;
   }
   return result;
 };
