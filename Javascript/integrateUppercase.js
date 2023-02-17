@@ -14,13 +14,12 @@ ITISTIMETOSTUDY
 const solution = (str) => {
   let result = "";
   if (str.length > 100) throw new Error("문자열의 길이는 100을 넘지 않습니다.");
+  // 아스키 코드 차이 값 산출
+  const diff = "a".charCodeAt() - "A".charCodeAt();
   for (s of str) {
-    let asciiCode = s.charCodeAt();
-
     if (s >= "a" && s <= "z") {
-      result += String.fromCharCode(
-        asciiCode - (asciiCode - s.toUpperCase().charCodeAt())
-      );
+      let asciiCode = s.charCodeAt();
+      result += String.fromCharCode(asciiCode - diff);
     } else result += s;
   }
   return result;
