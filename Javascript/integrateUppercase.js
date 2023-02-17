@@ -18,7 +18,7 @@ const solution = (str) => {
   const diff = "a".charCodeAt() - "A".charCodeAt();
   for (s of str) {
     if (s >= "a" && s <= "z") {
-      let asciiCode = s.charCodeAt();
+      const asciiCode = s.charCodeAt();
       result += String.fromCharCode(asciiCode - diff);
     } else result += s;
   }
