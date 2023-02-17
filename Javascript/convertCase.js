@@ -16,14 +16,16 @@ sTUdy
 const solution = (str) => {
   let result = "";
   if (str.length > 100) throw new Error("문자열의 길이는 100을 넘지 않습니다.");
-
+  const diff = "a".charCodeAt() - "A".charCodeAt();
   for (s of str) {
-    if (s >= "a" && s <= "z") s = s.toUpperCase();
-    else s = s.toLowerCase();
-    result += s;
+    const asciiCode = s.charCodeAt();
+    result += String.fromCharCode(
+      s >= "a" && s <= "z" ? asciiCode - diff : asciiCode + diff
+    );
   }
   return result;
 };
 
 console.log(solution("StuDY"));
 console.log(solution("koreaTimeGood"));
+console.log(solution("HELLO"));
