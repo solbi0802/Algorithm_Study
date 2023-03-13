@@ -14,7 +14,7 @@ kset
 */
 
 const solution = (str) => {
-  let result = [];
+  const result = [];
   for (let s of str) {
     if (!result.includes(s)) {
       result.push(s);
