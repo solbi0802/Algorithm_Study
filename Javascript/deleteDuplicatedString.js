@@ -14,12 +14,7 @@ kset
 */
 
 const solution = (str) => {
-  const result = [];
-  for (let s of str) {
-    if (!result.includes(s)) {
-      result.push(s);
-    }
-  }
+  const result = [...new Set(str)];
   return result.join("");
 };
 
