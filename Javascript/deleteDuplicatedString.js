@@ -14,13 +14,13 @@ kset
 */
 
 const solution = (str) => {
-  let result = "";
+  let result = [];
   for (let s of str) {
     if (!result.includes(s)) {
-      result += s;
+      result.push(s);
     }
   }
-  return result;
+  return result.join("");
 };
 
 console.log(solution("ksekkset"));
