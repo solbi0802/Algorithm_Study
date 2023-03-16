@@ -16,9 +16,16 @@ YES
 */
 
 const solution = (str) => {
-  str = str.toUpperCase().replace(/[^A-Z]/g, "");
-  if (str.split("").reverse().join("") !== str) return "NO";
-  return "YES";
+  str = str
+    .toUpperCase()
+    .replace(/[^A-Z]/g, "")
+    .split("");
+  const len = str.length;
+  let count = 0;
+  for (let i = 0; i < len; i++) {
+    if (str[i] !== str[len - i - 1]) count++;
+  }
+  return count > 0 ? "NO" : "YES";
 };
 
 const str = "found7, time: study; Yduts; emit, 7Dnuof";
