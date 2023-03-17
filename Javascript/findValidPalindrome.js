@@ -16,14 +16,17 @@ YES
 */
 
 const solution = (str) => {
-  str = str
-    .toUpperCase()
-    .replace(/[^A-Z]/g, "")
-    .split("");
+  str = str.toUpperCase();
   const len = str.length;
   let count = 0;
   for (let i = 0; i < len; i++) {
-    if (str[i] !== str[len - i - 1]) count++;
+    const front = str[i];
+    const back = str[len - i - 1];
+    // 알파벳 제외한 문자열 일때는 건너뛰기
+    if (!(front >= "A" || back >= "A") || !(front <= "Z" || back <= "Z"))
+      continue;
+
+    if (front !== back) count++;
   }
   return count > 0 ? "NO" : "YES";
 };
@@ -32,3 +35,6 @@ const str = "found7, time: study; Yduts; emit, 7Dnuof";
 console.log(solution(str));
 const str2 = "remember";
 console.log(solution(str2));
+
+const str3 = "rebber";
+console.log(solution(str3));
