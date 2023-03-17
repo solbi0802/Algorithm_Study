@@ -46,3 +46,21 @@ const arr2 = [
   "goodpeoplegoodtime",
 ];
 console.log(solution(arr2));
+
+const solution2 = (arr) => {
+  if (arr.length < 3 || arr.length > 30)
+    throw new Error("배열의 길이는 3보다 크고 30을 넘지 않아야 합니다.");
+  arr.sort((a, b) => {
+    if (a.length > b.length) {
+      return -1;
+    }
+    if (a.length < b.length) {
+      return 1;
+    }
+    return 0;
+  });
+
+  return arr[0];
+};
+console.log("solution2", solution2(arr));
+console.log("solution2", solution2(arr2));
