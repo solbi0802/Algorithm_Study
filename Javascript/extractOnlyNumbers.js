@@ -19,7 +19,7 @@ g0en2T0s8eSoft
 
 const solution = (str) => {
   str = str.replace(/[a-z|A-Z]/g, "");
-  return str++;
+  return Number(str);
 };
 const str = "tge0a1h205er";
 console.log(solution(str));
