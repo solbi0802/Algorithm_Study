@@ -21,14 +21,14 @@ C
 const solution = (str) => {
     let result;
     const map = new Map();
-    for (s of str) {
+    for (const s of str) {
         if (map.has(s))
             map.set(s, map.get(s) + 1);
         else
             map.set(s, 1);
     }
     let max = Number.MIN_SAFE_INTEGER;
-    for ([key, value] of map) {
+    for (const [key, value] of map) {
         if (value > max) {
             max = value;
             result = key;
