@@ -18,7 +18,6 @@ const solution = (arr) => {
     let answer = 0;
     let max = Number.MIN_SAFE_INTEGER;
 
-
     for (const num of arr) {
         let sum = 0, temp = num;
         while (temp > 0) {
