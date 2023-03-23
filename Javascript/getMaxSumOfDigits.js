@@ -28,7 +28,7 @@ const solution = (arr) => {
         if (sum > max) {
             max = sum;
             answer = num;
-        } else if (sum === max && num > answer){
+        } else if (sum === max && num > answer) {
             answer = num;
         }
     }
