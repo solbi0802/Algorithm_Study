@@ -18,19 +18,18 @@ const solution = (arr) => {
     let answer = 0;
     let max = Number.MIN_SAFE_INTEGER;
 
-
-    for (num of arr) {
+    for (const num of arr) {
         let sum = 0, temp = num;
-        while (temp) {
+        while (temp > 0) {
             sum += temp % 10;
             temp = Math.floor(temp / 10);
         }
         if (sum > max) {
             max = sum;
             answer = num;
+        } else if (sum === max && num > answer) {
+            answer = num;
         }
-        else if (sum === max)
-            if (num > answer) answer = num;
     }
     return answer;
 }
