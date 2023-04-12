@@ -18,7 +18,7 @@ const solution = (num) => {
     if (level === 0) return;
     else {
       recursion(Math.floor(level / 2));
-      result += level.toString() % 2;
+      result += (level % 2).toString();
     }
   };
   recursion(num);
