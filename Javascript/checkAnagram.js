@@ -26,29 +26,16 @@ NO
 
 const solution = (str1, str2) => {
   const mapData = new Map();
-  const mapData2 = new Map();
-  let compareVal;
+
   for (const s1 of str1) {
     if (mapData.has(s1)) mapData.set(s1, mapData.get(s1) + 1);
     else mapData.set(s1, 1);
   }
 
   for (const s2 of str2) {
-    if (mapData2.has(s2)) mapData2.set(s2, mapData2.get(s2) + 1);
-    else mapData2.set(s2, 1);
+    if (!mapData.has(s2) || mapData.get(s2) === 0) return 'NO';
+    mapData.set(s2, mapData.get(s2) - 1);
   }
-
-  if (mapData.size !== mapData2.size) return 'NO';
-
-  for (let [key, val] of mapData) {
-    compareVal = mapData2.get(key);
-    if (
-      compareVal !== val ||
-      (compareVal === undefined && !compareVal.has(key))
-    )
-      return 'NO';
-  }
-
   return 'YES';
 };
 
