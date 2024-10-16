@@ -21,10 +21,15 @@ n	          result
 
 const solution = (n) => {
   let answer = 0;
-  // n의 홀수 약수만 찾음
-  for (let i = 1; i <= n; i += 2) if (n % i === 0) answer++;
+  for (let i = 1; i <= n; i++) {
+    let sum = i;
+    for (let j = i + 1; sum < n; j++) {
+      sum += j;
+    }
+    if (sum === n) answer++;
+  }
   return answer;
 };
 
-console.log(solution(15));
-console.log(solution(5));
+console.log(solution(15)); // 4
+console.log(solution(5)); // 2
